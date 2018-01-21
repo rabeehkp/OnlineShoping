@@ -28,28 +28,41 @@ class Store_FetchFunctions: NSObject {
     
     func storeToCoreData(product_Name : String,product_Brand : String,original_Price : String,discount_Price : String,userPhotoString : String,catagory : String, urlCoreData : String){
         if catagory == "Mens"{
-            coreVariables.brandsForGents.StoreProduct(product_Name: product_Name, product_Brand: product_Brand, product_Price: original_Price, product_Discount: discount_Price, product_Image: userPhotoString)
-            if urlCoreData == "Mens_shirt"{
+                switch (urlCoreData){
+                case "Mens_shirt":
                 coreVariables.mens_Shirt.StoreProduct(product_Name: product_Name, product_Brand: product_Brand, product_Price: original_Price, product_Discount: discount_Price, product_Image: userPhotoString)
-            }
-            else if urlCoreData == "Mens_sweatshirt" {
+            break
+                case "Mens_sweatshirt" :
                 coreVariables.mens_SweatShirt.StoreProduct(product_Name: product_Name, product_Brand: product_Brand, product_Price: original_Price, product_Discount: discount_Price, product_Image: userPhotoString)
-            }else if urlCoreData == "Mens_tshirt"{
+            break
+                case "Mens_tshirt":
                 coreVariables.mens_Tshirt.StoreProduct(product_Name: product_Name, product_Brand: product_Brand, product_Price: original_Price, product_Discount: discount_Price, product_Image: userPhotoString)
-            }
-            
-        }else{
-            coreVariables.brandsForLadies.StoreProduct(product_Name: product_Name, product_Brand: product_Brand, product_Price: original_Price, product_Discount: discount_Price, product_Image: userPhotoString)
-            if urlCoreData == "Women_kurta"{
-                coreVariables.womens_Kurta.StoreProduct(product_Name: product_Name, product_Brand: product_Brand, product_Price: original_Price, product_Discount: discount_Price, product_Image: userPhotoString)
-            }
-            else if urlCoreData == "Women_saree" {
-                coreVariables.womens_Saree.StoreProduct(product_Name: product_Name, product_Brand: product_Brand, product_Price: original_Price, product_Discount: discount_Price, product_Image: userPhotoString)
-            }else if urlCoreData == "Women_tops"{
-                coreVariables.womens_Tops.StoreProduct(product_Name: product_Name, product_Brand: product_Brand, product_Price: original_Price, product_Discount: discount_Price, product_Image: userPhotoString)
+            break
+                default:
+                    break
             }
         }
-        
+        else{
+                switch (urlCoreData){
+                case "Women_kurta" :
+                coreVariables.womens_Kurta.StoreProduct(product_Name: product_Name, product_Brand: product_Brand, product_Price: original_Price, product_Discount: discount_Price, product_Image: userPhotoString)
+            break
+                case "Women_saree" :
+                coreVariables.womens_Saree.StoreProduct(product_Name: product_Name, product_Brand: product_Brand, product_Price: original_Price, product_Discount: discount_Price, product_Image: userPhotoString)
+            break
+                case "Women_tops":
+                coreVariables.womens_Tops.StoreProduct(product_Name: product_Name, product_Brand: product_Brand, product_Price: original_Price, product_Discount: discount_Price, product_Image: userPhotoString)
+                    break
+                default:
+                    break
+                }
+            }
+        }
+    
+    func store_To_Cart(Name: String,Brand:String, Price:String,Discount:String,Image:String){
+        coreVariables.add_cart.StoreProduct(product_Name: Name, product_Brand: Brand, product_Price: Price, product_Discount: Discount, product_Image: Image)
+    }
+    
     }
 
-}
+

@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     var proDiscount : String!
     var proMRP : String!
     var proName : String!
+    var pro_brand : String!
+    var img_Url : String!
+    var coreVariables = GetCoreDataVariables()
+    var storeToCoredata = Store_FetchFunctions()
     
     //MARK: -Outlets
     @IBOutlet weak var crossView: UIView!
@@ -28,6 +32,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Place Your Order"
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
         productImageView.image = productImage
         productDiscount.text = proDiscount
         productMRP.text = proMRP
@@ -47,6 +54,12 @@ class ViewController: UIViewController {
 
     //MARK: -Actions
     @IBAction func addToCart(_ sender: UIButton) {
+        
+        coreVariables.add_cart.StoreProduct(product_Name: proName, product_Brand: pro_brand, product_Price: proMRP, product_Discount: proDiscount, product_Image: img_Url)
+        
+        let  storyboard =  UIStoryboard(name: "Main", bundle: nil)
+        let  destination = storyboard.instantiateViewController(withIdentifier: "addCartTblVC") as! addCartTblVC
+       self.present(destination, animated: true, completion: nil)
         
     }
     

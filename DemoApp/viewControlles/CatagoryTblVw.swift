@@ -14,6 +14,7 @@ class CatagoryTblVw: UITableViewController {
     var catagoryNames = ["Mens", "Ladies" ]
     
     //MARK: -Outlets
+    @IBOutlet weak var showCart: UIButton!
     
     
     //MARK: -View Methords
@@ -58,7 +59,14 @@ tableView.tableFooterView = UIView()
         return 80
     }
     
-    // MARK: - Navigation
+    // MARK: - Navigation Action
+    
+    @IBAction func showCart(_ sender: UIButton) {
+        let  storyboard =  UIStoryboard(name: "Main", bundle: nil)
+        let  destination = storyboard.instantiateViewController(withIdentifier: "addCartTblVC") as! addCartTblVC
+        self.present(destination, animated: true, completion: nil)
+    }
+    
 
     
 

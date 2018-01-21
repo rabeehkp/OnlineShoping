@@ -53,16 +53,5 @@ class CodeCheck: NSObject {
             }
         }
     }
-    func storeToBrand(uniqueVal: [String],urlCoreData: String){
-        for item in 0..<uniqueVal.count{
-            let values = uniqueVal[item]
-            coreVariables.brand.StoreBrand(object: values , key: urlCoreData)
-        }
-    }
-    func store_TO_collection(uniqueVal: [String],urlCoreData: String){
-        for item in 0..<uniqueVal.count{
-            let values = uniqueVal[item]
-            coreVariables.collection_Brands.Store_Collection_Brands(object: values , key: urlCoreData)
-        }
-    }
+   
 }

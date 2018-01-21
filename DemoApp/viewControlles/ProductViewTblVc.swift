@@ -17,10 +17,7 @@ class ProductViewTblVc: UITableViewController {
     var womenCoreData = ["Women_kurta","Women_saree","Women_tops"]
     var catagory : String!
    
-    var brandsForGents = BrandsForGents()
-    var brandsForLadies = BrandsForLadies()
-    var resultsGents = [BrandsForGents]() // coredata value
-    var resultsLadies = [BrandsForLadies]()
+   
     
     var pro_Name : [String] = []
     var pro_Price : [String] = []

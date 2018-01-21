@@ -10,18 +10,14 @@ import UIKit
 
 class GetCoreDataVariables: NSObject {
 
-    var brandsForGents = BrandsForGents()
-    var brandsForLadies = BrandsForLadies()
+    
     var mens_Shirt = Mens_shirt()
     var mens_SweatShirt = Mens_sweatshirt()
     var mens_Tshirt = Mens_tshirt()
     var womens_Kurta = Women_kurta()
     var womens_Saree = Women_saree()
     var womens_Tops = Women_tops()
-    var collection_Brands = Collection_Brands()
-    var results_collection_brand = [Collection_Brands]()
-    var resultsGents = [BrandsForGents]() // coredata value
-    var resultsLadies = [BrandsForLadies]() // coredata value
+   
     var results_mens_Shirt = [Mens_shirt]()
     var results_mens_SweatShirt = [Mens_sweatshirt]()
     var results_mens_Tshirt = [Mens_tshirt]()
@@ -37,9 +33,8 @@ class GetCoreDataVariables: NSObject {
     var filter_womens_Tops = [Women_tops]()
     //var filterResult = [String]()
     
-    //Brand Variables
-    var brand = Brand()
-    var resultsBrand = [Brand]() //CoreData values
+    var add_cart = Add_Cart()
+    var result_add_Cart = [Add_Cart]()
     
     var pro_Image : [UIImage] = []
 }

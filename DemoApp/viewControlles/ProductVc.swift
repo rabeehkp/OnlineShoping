@@ -24,7 +24,7 @@ class ProductVc: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     var pro_Price : [String] = []
     var pro_Discount : [String] = []
     var pro_Image : [UIImage] = []
-    
+    var pro_img_url : [String] = []
     //store filter data
     var filter_image : [String] = []
     var filter_Name : [String] = []
@@ -84,6 +84,7 @@ class ProductVc: UIViewController, UICollectionViewDelegate, UICollectionViewDat
                         pro_Name.append(name!)
                         pro_Discount.append(discount!)
                         pro_Image.append(img!)
+                        pro_img_url.append(img_Url)
                     
                     break
                 case "Mens_sweatshirt" :
@@ -105,6 +106,7 @@ class ProductVc: UIViewController, UICollectionViewDelegate, UICollectionViewDat
                         pro_Name.append(name!)
                         pro_Discount.append(discount!)
                         pro_Image.append(img!)
+                        pro_img_url.append(img_Url!)
                     break
                 case "Mens_tshirt" :
                     
@@ -125,6 +127,7 @@ class ProductVc: UIViewController, UICollectionViewDelegate, UICollectionViewDat
                         pro_Name.append(name!)
                         pro_Discount.append(discount!)
                         pro_Image.append(img!)
+                        pro_img_url.append(img_Url!)
                     break
                 default:
                     break
@@ -152,6 +155,7 @@ class ProductVc: UIViewController, UICollectionViewDelegate, UICollectionViewDat
                         pro_Name.append(name!)
                         pro_Discount.append(discount!)
                         pro_Image.append(img!)
+                        pro_img_url.append(img_Url!)
                     break
                 case "Women_saree" :
                         let img_Url = coreVariables.filter_womens_Saree[indexPath.row].product_Image
@@ -171,6 +175,7 @@ class ProductVc: UIViewController, UICollectionViewDelegate, UICollectionViewDat
                         pro_Name.append(name!)
                         pro_Discount.append(discount!)
                         pro_Image.append(img!)
+                        pro_img_url.append(img_Url!)
                     break
                 case "Women_tops":
                     
@@ -193,6 +198,7 @@ class ProductVc: UIViewController, UICollectionViewDelegate, UICollectionViewDat
                         pro_Name.append(name!)
                         pro_Discount.append(discount!)
                         pro_Image.append(img!)
+                        pro_img_url.append(img_Url!)
                     break
                 default:
                     break
@@ -210,6 +216,8 @@ class ProductVc: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         destination.proMRP = pro_Price[indexPath.row]
         destination.proDiscount = pro_Discount[indexPath.row]
         destination.productImage = pro_Image[indexPath.row]
+        destination.pro_brand = selectedBrand
+        destination.img_Url = pro_img_url[indexPath.row]
         self.navigationController?.pushViewController(destination, animated: true)
     }
     

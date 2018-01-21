@@ -1,36 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Brand" representedClassName="Brand" syncable="YES">
-        <attribute name="mens_Shirt" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="mens_SweatShirt" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="mens_Tshirt" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="womens_Kurta" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="womens_Saree" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="womens_Tops" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="BrandsForGents" representedClassName="BrandsForGents" syncable="YES">
-        <attribute name="jsonUrl" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Add_Cart" representedClassName="Add_Cart" syncable="YES">
         <attribute name="product_Brand" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="product_Discount" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="product_Image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="product_Name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="product_Price" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="BrandsForLadies" representedClassName="BrandsForLadies" syncable="YES">
-        <attribute name="jsonUrl" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="product_Brand" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="product_Discount" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="product_Image" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="product_Name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="product_Price" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="Collection_Brands" representedClassName="Collection_Brands" syncable="YES">
-        <attribute name="mens_Shirt" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="mens_SweatShirt" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="mens_Tshirt" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="women_Kurta" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="women_Saree" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="women_Top" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Mens_shirt" representedClassName="Mens_shirt" syncable="YES">
         <attribute name="product_Brand" optional="YES" attributeType="String" syncable="YES"/>
@@ -75,15 +50,12 @@
         <attribute name="product_Price" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Brand" positionX="-12125" positionY="-10395" width="128" height="135"/>
-        <element name="BrandsForGents" positionX="-12276" positionY="-10404" width="128" height="133"/>
-        <element name="BrandsForLadies" positionX="-12411" positionY="-10413" width="128" height="133"/>
-        <element name="Collection_Brands" positionX="-12285" positionY="-10563" width="128" height="133"/>
         <element name="Mens_shirt" positionX="-12123" positionY="-10098" width="128" height="118"/>
         <element name="Mens_sweatshirt" positionX="-12267" positionY="-10098" width="128" height="118"/>
         <element name="Mens_tshirt" positionX="-12411" positionY="-10098" width="128" height="118"/>
         <element name="Women_kurta" positionX="-12123" positionY="-10224" width="128" height="118"/>
         <element name="Women_saree" positionX="-12267" positionY="-10224" width="128" height="118"/>
         <element name="Women_tops" positionX="-12411" positionY="-10224" width="128" height="118"/>
+        <element name="Add_Cart" positionX="-12269" positionY="-9963" width="128" height="118"/>
     </elements>
 </model>
